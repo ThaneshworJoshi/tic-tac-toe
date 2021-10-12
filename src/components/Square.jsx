@@ -3,11 +3,15 @@ import './square.css';
 
 const Square = ({ value, onClick, winner }) => {
   if (!value) {
-    return <button onClick={onClick} disabled={Boolean(winner)} />;
+    return (
+      <button className='square' onClick={onClick} disabled={Boolean(winner)} />
+    );
   }
   return (
     <div>
-      <button disabled>{value}</button>
+      <button className={`square square_${value.toLowerCase()}`} disabled>
+        {value}
+      </button>
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 5rem;
+  color: rgb(163, 255, 127);
+  border: solid 1px black;
+}
+
+.square_o {
+  background-color: green;
+}
+
+.square_x {
+  background-color: rebeccapurple;
+}

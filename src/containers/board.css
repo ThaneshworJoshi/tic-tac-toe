@@ -1,0 +1,15 @@
+.grid {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.reset {
+  margin-top: 2rem;
+  font-size: 2rem;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+}

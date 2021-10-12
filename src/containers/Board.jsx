@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Square from '../components/Square';
+import './board.css';
 
 const Board = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
@@ -28,18 +29,20 @@ const Board = () => {
   return (
     <div>
       <p>{currentPlayer} Players turn </p>
-      {Array(9)
-        .fill(null)
-        .map((_, i) => {
-          return (
-            <Square
-              winner={winner}
-              key={i}
-              onClick={() => setSquareValue(i)}
-              value={squares[i]}
-            />
-          );
-        })}
+      <div className='grid'>
+        {Array(9)
+          .fill(null)
+          .map((_, i) => {
+            return (
+              <Square
+                value={squares[i]}
+                winner={winner}
+                key={i}
+                onClick={() => setSquareValue(i)}
+              />
+            );
+          })}
+      </div>
       <button className='reset' onClick={reset}>
         RESET
       </button>
