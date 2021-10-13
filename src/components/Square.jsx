@@ -1,14 +1,20 @@
-import React from 'react';
-import './square.css';
+import React from "react";
+import "./square.css";
 
 const Square = ({ value, onClick, winner }) => {
   if (!value) {
     return (
-      <button className='square' onClick={onClick} disabled={Boolean(winner)} />
+      <div className={`square-box`}>
+        <button
+          className={`square`}
+          onClick={onClick}
+          disabled={Boolean(winner)}
+        />
+      </div>
     );
   }
   return (
-    <div>
+    <div className={`square-box`}>
       <button className={`square square_${value.toLowerCase()}`} disabled>
         {value}
       </button>
