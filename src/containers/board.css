@@ -1,15 +1,78 @@
-.grid {
-  display: grid;
-  grid-gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
+.body-section {
+  margin-top: 100px;
 }
 
-.reset {
-  margin-top: 2rem;
-  font-size: 2rem;
-  background-color: aquamarine;
+.bg-blur {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: 1;
+}
+
+.player-turn {
+  padding: 20px 0;
+  width: 300px;
+  margin: 0 auto;
+  border: 3px solid #fff;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.player-turn p {
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+}
+
+.result-board {
+  display: flex;
+  background-color: rgb(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.result-board p {
+  background-color: #fff;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.tc-box-wrapper {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tc-bottom-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.tc-reset {
+  font-size: 1.5rem;
+  background-color: #7c83fd;
   border: none;
-  border-radius: 6px;
-  padding: 1rem;
+  border-radius: 50px;
+  padding: 1rem 6rem;
   cursor: pointer;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+  border: 2px solid #fff;
 }
